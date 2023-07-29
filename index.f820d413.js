@@ -1,0 +1,2 @@
+let t=1;const e=setInterval(function(){if(t>5){clearInterval(e);return}t+=1},3e3),n=document.querySelector(".box1"),o=document.querySelector(".box2");setInterval(function(){let t=100*Math.random()+50;n.style.width=`${t}px`,n.style.height=`${t}px`,n.style.backgroundColor=`rgb(${255*Math.random()+0}, ${255*Math.random()+0}, ${255*Math.random()+0})`},500),setInterval(function(){o.style.top=`${10*Math.random()+0}%`,o.style.left=`${10*Math.random()+45}%`},100);
+//# sourceMappingURL=index.f820d413.js.map
