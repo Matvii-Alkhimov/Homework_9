@@ -7,7 +7,36 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1>Title</h1>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <!-- Game -->
+    <article class="game">
+        <p class="game-text">Wellcome! <span></span></p>
+        <canvas class="timer"></canvas>
+        <button class="start-button">START</button>
+        <form action="" class="difficulty-form">
+            <label for="" class="difficulty-label easy">
+                EASY
+                <input name="difficulty" checked type="radio" value="easy" class="difficulty-input easy-input">
+            </label>
+            <label for="" class="difficulty-label medium">
+                MEDIUM
+                <input name="difficulty" type="radio" value="medium" class="difficulty-input medium-input">
+            </label>
+            <label for="" class="difficulty-label difficult">
+                DIFFICULT
+                <input name="difficulty" type="radio" value="difficult" class="difficulty-input difficult-input">
+            </label>
+        </form>
+        <p class="score">Score: 0</p>
+    </article>
+    <!-- Stopwatch -->
+    <article class="stopwatch">
+        <input autofocus type="text" class="stopwatch-input">
+        <button class="stopwatch-button"></button>
+    </article>
     <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/game.js"></script>
+    <script type="module" src="./js/stopwatch.js"></script>
 </body>
 </html>

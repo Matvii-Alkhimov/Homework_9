@@ -1,3 +1,220 @@
-h1 {
+/* 1 */
+
+
+
+/* 2 */
+
+.box1 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 35%;
+    top: 0;
+    background-color: blueviolet;
+    border-radius: 50%;
+    transition: all 500ms linear;
+    transform-origin: center;
+}
+
+.box2 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 45%;
+    background-color: brown;
+    border-radius: 50%;
+    transition: all 500ms linear;
+}
+
+/* 3 */
+
+.game {
+    margin-top: 570px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 650px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    position: relative;
+}
+
+.game > p {
+    font-size: 30px;   
+    position: relative;
+}
+
+.start-button {
+    font-size: 20px;
+    border: none;
+    margin-bottom: 20px;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-radius: 40px;
+    background-color: cadetblue;
+    transition: all 250ms linear;
+}
+
+.start-button:hover,
+.start-button:focus {
+    scale: 1.1;
+    border-radius: 20px;
+}
+
+.difficulty-form {
+    margin-bottom: 30px;
+}
+
+.difficulty-label {
+    font-size: 20px;
+}
+
+.easy {
+    color: green;
+}
+
+.medium {
+    color: yellow;
+}
+
+.difficult {
     color: red;
 }
+
+.buttons-container-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+}
+
+.buttons-container-1 > .btn-cont {
+    display: flex;
+    text-align: center; 
+    justify-content: center;
+}
+
+
+.buttons-container-2,
+.buttons-container-3 {
+    position: absolute;
+    opacity: 0;
+    transition: all 250ms linear;
+    cursor: auto;
+}
+
+.buttons-container-2 > div:not(:last-of-type),
+.buttons-container-3 > div:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.buttons-container-2 {
+    top: -10px;
+    left: -80px;
+}
+
+.buttons-container-3 {
+    top: -10px;
+    right: -80px;
+}
+
+.buttons-container-2.active,
+.buttons-container-3.active {
+    transition: all 250ms linear;
+    opacity: 1;
+    /* cursor: pointer; */
+}
+
+.game-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 200ms linear;
+    background-color: gray;
+}
+
+.game-button:hover {
+    scale: 1.1;
+}
+
+.game-button:disabled {
+    cursor: auto;
+}
+
+.game-button:disabled:hover {
+    scale: 1;
+}
+
+.timer {
+    background-color: green;
+    opacity: 0.5;
+    height: 15px;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    bottom: 90%;
+    left: 50%;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: none;
+}
+
+.timer.active {
+    display: block;
+}
+
+/* 4 */
+
+.stopwatch {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.stopwatch-button {
+    padding: 0;
+    border: none;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    background-color: white;
+    box-shadow: 6px 4px 8px gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.stopwatch-button::after {
+    display: inline-flex;
+    height: 80%;
+    width: 80%;
+    content: '';
+    background-image: url(./images/stopwatch.svg);
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.stopwatch-input {
+    box-sizing: border-box;
+    height: 100px;
+    width: 250px;
+    padding: 0;
+    border: none;
+    box-shadow: 4px 4px 8px gray;
+    font-size: 40px;
+    margin-right: 40px;
+    padding-left: 20px;
+}
+
+.stopwatch-button > svg {
+    height: 100%;
+    width: 100%;
+}
+
